@@ -9,7 +9,7 @@
       }
 
       try {
-        const resposta = await fetch('URL_DO_SEU_WEB_APP', {
+        const resposta = await fetch('https://script.google.com/macros/s/AKfycbw1dABo4T8FglrE1K6hOMOP49lwzqxF44_6n6D3Ud4K9N6JMOSr_13XSUMaR0Y9ZVt0/exec', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ nome, acompanhantes })
