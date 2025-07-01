@@ -1,4 +1,4 @@
-<script>
+
   function confirmar() {
     const nome = document.getElementById("nome").value.trim();
     const acompanhantes = document.getElementById("acompanhantes").value.trim();
@@ -16,4 +16,3 @@
   function redirecionar(resposta) {
     window.location.href = resposta.url;
   }
-</script>
