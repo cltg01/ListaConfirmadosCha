@@ -1,0 +1,25 @@
+
+    body { 
+    font-family: Arial, sans-serif; 
+    background: #fdfaf4; 
+    text-align: center; 
+    padding: 40px; 
+}
+    
+    .titulo-cha { 
+    font-size: 40px; 
+    color: #154ec1; 
+}
+    input, textarea, button {
+    display: block;
+    width: 100%; 
+    margin: 20px 0; 
+    padding: 15px; 
+    font-size: 18px;
+    }
+    button { 
+    background: #154ec1; 
+    color: #fff; 
+    border: none; 
+    cursor: pointer; 
+}
