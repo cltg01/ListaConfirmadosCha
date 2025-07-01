@@ -8,7 +8,7 @@
     }
 
     const script = document.createElement("script");
-    const url = `https://script.google.com/macros/s/AKfycbw1dABo4T8FglrE1K6hOMOP49lwzqxF44_6n6D3Ud4K9N6JMOSr_13XSUMaR0Y9ZVt0/exec?nome=${encodeURIComponent(nome)}&acompanhantes=${encodeURIComponent(acompanhantes)}&callback=redirecionar`;
+    const url = `https://script.google.com/macros/s/AKfycbwpzykpvpHSL6d2LLw_ThERaq3CnDsr1y5UxCEE2GDyAFIKcSZ8KJycW350IdKcLeQh/exec?nome=${encodeURIComponent(nome)}&acompanhantes=${encodeURIComponent(acompanhantes)}&callback=redirecionar`;
     script.src = url;
     document.body.appendChild(script);
   }
