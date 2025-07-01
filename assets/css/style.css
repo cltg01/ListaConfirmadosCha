@@ -17,7 +17,9 @@
     padding: 15px; 
     font-size: 18px;
     }
-    button { 
+    button {
+    justify-content: center;
+    text-align: center; 
     background: #154ec1; 
     color: #fff; 
     border: none; 
