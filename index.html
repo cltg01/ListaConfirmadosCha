@@ -6,17 +6,41 @@
   <link rel="alternate icon" href="assets/img/coracao-icone.png" type="image/png">
   <title>Confirmação - Chá de Panela</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <h1 class="titulo-cha">Chá de Panela</h1>
-  <h2>Vitória & Cleito</h2>
-  <p>Confirme sua presença:</p>
-  <input id="nome" placeholder="Seu nome completo" />
-  <textarea id="acompanhantes" placeholder="Nome dos acompanhantes (se houver)"></textarea>
-  <button onclick="confirmar()">Confirmar Presença</button>
+  <!-- Fundo de partículas -->
+  <div id="particles-js"></div>
 
-  <img src="assets/img/convite.jpg" alt="Convite" width="300px">
+  <div class="container">
+    <h1 class="titulo-cha"><i class="fa-solid fa-mug-hot"></i> Chá de Panela</h1>
+    <h2 class="subtitulo"><i class="fa-solid fa-heart"></i> Vitória & Cleito</h2>
+    <p class="descricao">Confirme sua presença preenchendo abaixo:</p>
 
- <script src="assets/js/script.js"></script>
+    <div class="form">
+      <div class="input-group">
+        <i class="fa-solid fa-user"></i>
+        <input id="nome" placeholder="Seu nome completo" />
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-users"></i>
+        <textarea id="acompanhantes" placeholder="Nome dos acompanhantes (se houver)"></textarea>
+      </div>
+
+      <button onclick="confirmar()">
+        <i class="fa-solid fa-check"></i> Confirmar Presença
+      </button>
+    </div>
+
+    <div class="convite">
+      <img src="assets/img/convite.jpg" alt="Convite">
+    </div>
+  </div>
+
+  <!-- Biblioteca tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
