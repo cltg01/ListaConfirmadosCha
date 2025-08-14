@@ -1,29 +1,170 @@
-
-    body { 
-    font-family: Arial, sans-serif; 
-    background: #fdfaf4; 
-    text-align: center; 
-    padding: 40px; 
-}
-    
-    .titulo-cha { 
-    font-size: 40px; 
-    color: #154ec1; 
-}
-    input, textarea, button {
-    display: block;
-    width: 100%; 
-    margin: 20px 0; 
-    padding: 15px; 
-    font-size: 18px;
-    }
-    button {
-        display: block;
-        width: 100%; 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #f1f1f1;
+    display: flex;
     justify-content: center;
-    text-align: center; 
-    background: #154ec1; 
-    color: #fff; 
-    border: none; 
-    cursor: pointer; 
+    align-items: center;
+    background: #000; /* fundo preto sólido */
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(30, 30, 30, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+
+    /* animação de entrada */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* MOBILE - tela cheia */
+@media (max-width: 768px) {
+    body {
+        align-items: stretch; /* estica o container para o topo */
+    }
+
+    .container {
+        max-width: 100%;
+        min-height: 100vh;
+        border-radius: 0; /* sem bordas no mobile */
+        box-shadow: none;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* centraliza verticalmente o conteúdo */
+    }
+}
+/* TÍTULOS */
+.titulo-cha {
+    font-size: 40px;
+    color: #00d4ff;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtitulo {
+    font-size: 22px;
+    color: #ff6ec7;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.descricao {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* FORMULÁRIO */
+.form {
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background: #2a2a2a;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.input-group:hover {
+    background: #333;
+    transform: scale(1.02);
+}
+
+.input-group i {
+    color: #00d4ff;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.input-group:hover i {
+    transform: rotate(10deg);
+}
+
+input, textarea {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+}
+
+textarea {
+    height: 60px;
+}
+
+/* BOTÃO */
+button {
+    background: linear-gradient(90deg, #00d4ff, #007bff);
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    box-shadow: 0 0 10px #00d4ff;
+    transform: scale(1.03);
+}
+
+/* IMAGEM */
+.convite img {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.convite img:hover {
+    transform: scale(1.02);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    .titulo-cha { font-size: 28px; }
+    .subtitulo { font-size: 18px; }
+    .container { padding: 20px; }
+    button { font-size: 16px; padding: 12px; }
 }
